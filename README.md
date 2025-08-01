@@ -1,5 +1,6 @@
 # DevOps Test API
 
+**Autor:** Bruno Oliveira  
 API Python serverless deployada na AWS usando Docker, Lambda, API Gateway e Terraform.
 
 ## 🚀 Endpoints Disponíveis
@@ -51,16 +52,35 @@ O deploy é automático via GitHub Actions quando há push na branch `main`.
 ```bash
 # 1. Build e push da imagem
 cd api
-docker build -t <ecr-uri>:latest .
-docker push <ecr-uri>:latest
+docker build -t 288761769929.dkr.ecr.us-east-1.amazonaws.com/devops-test-api:latest .
+docker push 288761769929.dkr.ecr.us-east-1.amazonaws.com/devops-test-api:latest
 
 # 2. Update da Lambda
 aws lambda update-function-code \
   --function-name devops-test-api-function \
-  --image-uri <ecr-uri>:latest
+  --image-uri 288761769929.dkr.ecr.us-east-1.amazonaws.com/devops-test-api:latest
 ```
 
 ## 📊 Monitoramento
 
 - **Logs da Lambda:** CloudWatch `/aws/lambda/devops-test-api-function`
 - **Logs do API Gateway:** CloudWatch API Gateway execution logs
+
+## 👨‍💻 Desenvolvedor
+
+**Bruno Oliveira**  
+Projeto de teste técnico DevOps - Arquitetura serverless completa com CI/CD
+
+---
+
+### 📋 Checklist do Projeto
+
+- ✅ **API Python** funcionando
+- ✅ **Container Docker** otimizado
+- ✅ **AWS Lambda + API Gateway** deployado
+- ✅ **Terraform** gerenciando infraestrutura
+- ✅ **GitHub Actions** CI/CD pipeline
+- ✅ **Documentação** completa
+- ✅ **URLs funcionais** em produção
+
+**Status:** 🎉 **COMPLETO E FUNCIONANDO**
