@@ -1,5 +1,7 @@
 # DevOps Test API
 
+# Versão 1.0.0
+
 **Autor:** Bruno Oliveira  
 API Python serverless deployada na AWS usando Docker, Lambda, API Gateway e Terraform.
 
